@@ -574,6 +574,10 @@ public extension TTGSnackbar {
             rightMarginConstraint?.isActive = self.shouldActivateLeftAndRightMarginOnCustomContentView ? true : customContentView == nil
             centerXConstraint?.isActive = true
             
+            if UIScreen.main.traitCollection.userInterfaceIdiom == .pad {
+                self.widthAnchor.constraint(equalToConstant: 420).isActive = true 
+            }
+            
             // Show
             showWithAnimation()
         } else {
