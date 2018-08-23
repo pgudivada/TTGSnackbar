@@ -572,7 +572,7 @@ public extension TTGSnackbar {
             topMarginConstraint?.isActive = false // For top animation
             leftMarginConstraint?.isActive = self.shouldActivateLeftAndRightMarginOnCustomContentView ? true : customContentView == nil
             rightMarginConstraint?.isActive = self.shouldActivateLeftAndRightMarginOnCustomContentView ? true : customContentView == nil
-            centerXConstraint?.isActive = customContentView != nil
+            centerXConstraint?.isActive = true
             
             // Show
             showWithAnimation()
